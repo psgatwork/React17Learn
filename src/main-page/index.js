@@ -6,7 +6,7 @@ import './main-page.css';
 function App() {
   return (
     <div className='Container'>
-      <Header subtitle="House List" title="list of houses"></Header>
+      <Header subtitle="House List - All" title="list of houses for sale"></Header>
     </div>
   );
 }
