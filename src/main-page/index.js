@@ -1,14 +1,16 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import Header from './header';
 import './main-page.css';
 
 function App() {
   let houseCollection;
+  const [allHouses, setAllHouses] = useState([]);
   useEffect(()=>{
     const fetchHouses = async () => {
       const rsp = await fetch("/houses.json");
       const houses = await rsp.json();
+      setAllHouses(houses); 
       return houses;
     };
     fetchHouses().then((data) =>{
